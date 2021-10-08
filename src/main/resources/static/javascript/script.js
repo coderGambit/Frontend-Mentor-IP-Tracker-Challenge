@@ -50,7 +50,7 @@ function sendHttpRequest(url) {
                 updateMap(val);
             }
             else {
-                alert("There was an error serving your request, response was: " + xhr.responseText);
+                alert("There was an error serving your request");
             }
         }
     }

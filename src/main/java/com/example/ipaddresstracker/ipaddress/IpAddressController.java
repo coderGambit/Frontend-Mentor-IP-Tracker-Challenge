@@ -16,7 +16,7 @@ import java.net.URL;
 @RestController
 public class IpAddressController{
 
-	static final String API_KEY = "at_nzakoX4zoRJs9atEiB51iKqZst93P";
+	static final String API_KEY = System.getenv("IP_API_KEY");
 	static final String BASE_URL = "https://geo.ipify.org/api/v1?";
 	static final String REQUIRED_URL = BASE_URL + "&apiKey=" + API_KEY;
 
