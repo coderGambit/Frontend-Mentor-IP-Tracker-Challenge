@@ -66,8 +66,10 @@ function getIPInfo(formData = null){
         }
         else if(isDomainName(formData))
             url += "/domain/" + formData;
-        else
+        else {
             alert("Please enter a valid IP address or domain name");
+            return;
+        }
     }
     else{
         url += "/defaultIP";
