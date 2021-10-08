@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+              integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+              crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+                integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+                crossorigin=""></script>
+
+        <title>Frontend Mentor | IP Address Tracker</title>
+
+    </head>
+    <body>
+
+        <main class="mainContainer">
+
+            <section class="top">
+
+                <h1>IP Address Tracker</h1>
+
+                <form class="ipAddressForm" name="ipAddressForm">
+
+                    <input type="text" name="ip" id="ip" placeholder="Search for any IP address or domain" required>
+                    <input type="image" class="submitButton" name="submitButton" id="submitButton" src="images/icon-arrow.svg" alt="submit">
+
+                </form>
+
+            </section>
+
+            <section class="results">
+
+                <section class="data ipAddress">
+
+                    <span class="dataHeading">IP Address</span>
+                    <span class="dataResult" id="ipAddress"></span>
+
+                </section>
+
+                <section class="data location">
+
+                    <span class="dataHeading">Location</span>
+                    <span class="dataResult" id="location"></span>
+
+                </section>
+
+                <section class="data timezone">
+
+                    <span class="dataHeading">Timezone</span>
+                    <span class="dataResult" id="timezone"></span>
+
+                </section>
+
+                <section class="data isp">
+
+                    <span class="dataHeading">ISP</span>
+                    <span class="dataResult" id="isp"></span>
+
+                </section>
+
+            </section>
+
+            <section class="map" id="mapid"></section>
+
+        </main>
+
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href='https://www.rondellborel.com'>Rondell Borel</a>.
+        </p>
+
+        <script src="javascript/script.js" type="application/javascript"></script>
+    </body>
+</html>
