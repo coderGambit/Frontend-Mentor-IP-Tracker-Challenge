@@ -11,7 +11,9 @@ let marker;
 let isMapInitialized = false;
 let isMarkerInitialized = false;
 
-console.log("Starting");
+window.onload = ()=>{
+    myFormElement.reset();
+}
 
 document.addEventListener('DOMContentLoaded', ()=>{
     submitElement.addEventListener('click', getIpOrDomain, false);
@@ -56,7 +58,7 @@ function sendHttpRequest(url) {
 }
 
 function getIPInfo(formData = null){
-    console.log("getting ip");
+
     let url = "/locate";
 
     if(formData != null){
@@ -119,7 +121,7 @@ function getMarker(lat, long, myMap){
 }
 
 function updateElements(ipInfo) {
-    console.log("updating elements");
+
     updateEl(ipElement, ipInfo.ip)
     updateEl(locationElement, ipInfo.location.city + ", " + ipInfo.location.region);
     updateEl(timezoneElement, "UTC " + ipInfo.location.timezone);
@@ -132,7 +134,6 @@ function updateEl(el, val){
 }
 
 function initPage() {
-    console.log("initializing page");
     getIPInfo();
 }
 
