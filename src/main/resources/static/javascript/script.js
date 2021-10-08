@@ -118,10 +118,15 @@ function getMarker(lat, long, myMap){
 
 function updateElements(ipInfo) {
     console.log("updating elements");
-    ipElement.innerText = ipInfo.ip;
-    locationElement.innerText = ipInfo.location.city + " " + ipInfo.location.region;
-    timezoneElement.innerText = "UTC " + ipInfo.location.timezone;
-    mapElement.innerText = ipInfo.isp;
+    updateEl(ipElement, ipInfo.ip)
+    updateEl(locationElement, ipInfo.location.city + ", " + ipInfo.location.region);
+    updateEl(timezoneElement, "UTC " + ipInfo.location.timezone);
+    updateEl(mapElement, ipInfo.isp);
+}
+
+function updateEl(el, val){
+    el.innerText = val;
+    el.setAttribute('title', val);
 }
 
 function initPage() {
